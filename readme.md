@@ -25,11 +25,11 @@
 
 9. SELECT name FROM owners WHERE name LIKE 'E%'
 
-10. INSERT INTO owners
-		(name, age)
-		VALUES
-		('John', 33),
-11. 	('Jane', 43)
+10 & 11. INSERT INTO owners
+			(name, age)
+			VALUES
+			('John', 33),
+			('Jane', 43)
 
 12. UPDATE owners
 		SET age = 30
@@ -43,12 +43,12 @@
   		WHERE name = 'Janet'
   		RETURNING *;
 
-15. INSERT INTO properties
-		(name, num_units)
-		VALUES
-		('Archstone', 20),
-16.     ('Shithole', 37),
-		('Crackhouse', 15)
+15 & 16. INSERT INTO properties
+			(name, num_units)
+			VALUES
+			('Archstone', 20),
+	   		('Shithole', 37),
+			('Crackhouse', 15)
 
 17. SELECT * FROM properties 
 		WHERE name != 'Archstone'
@@ -82,13 +82,13 @@
 
 1. ALTER TABLE properties RENAME COLUMN name TO property_name
 
-UPDATE properties
-	SET owner_id = 2
-	WHERE property_name = 'Crackhouse'
+	UPDATE properties
+		SET owner_id = 2
+		WHERE property_name = 'Crackhouse'
 
-UPDATE properties
-	SET owner_id = 3
-	WHERE property_name = 'Shithole'
+	UPDATE properties
+		SET owner_id = 3
+		WHERE property_name = 'Shithole'
 
 2. SELECT count(*) FROM properties WHERE (owner_id > 1) AND (owner_id < 3)
 
